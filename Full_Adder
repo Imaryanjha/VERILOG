@@ -1,0 +1,11 @@
+module Full_Adder(A,B,Ci,S,C,Co);
+
+input A,B,Ci;
+output S,C,Co;
+
+//assign Output SUM&COUT
+
+assign S= A^B^C;
+assign Co=A&B|B&C|A&C;
+
+endmodule
