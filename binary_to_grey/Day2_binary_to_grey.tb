@@ -1,0 +1,23 @@
+module binary_to_grey_tb;
+
+	// Inputs
+	reg [3:0] B;
+
+	// Outputs
+	wire [3:0] G;
+	reg [3:0] i;
+	// Instantiate the Unit Under Test (UUT)
+	binary_to_grey uut (
+		.B(B), 
+		.G(G)
+	);
+
+	initial begin
+	for (i=4'd0; i<=4'd15;i=i+4'd1)
+		B=i;#5;
+		$monitor ("%b",G);
+		$finish;
+
+	end
+      
+endmodule
