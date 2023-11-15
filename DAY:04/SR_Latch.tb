@@ -1,0 +1,38 @@
+module SR_Latch_tb;
+
+	// Inputs
+	reg S;
+	reg R;
+
+	// Outputs
+	wire Q;
+	wire Qn;
+
+	// Instantiate the Unit Under Test (UUT)
+	S_R_Latch uut (
+		.S(S), 
+		.R(R), 
+		.Q(Q), 
+		.Qn(Qn)
+	);
+
+	initial begin
+		// Initialize Inputs
+		S = 0;
+		R = 0;
+		#100 S = 1;
+		#100 S = 0;
+		#100 R = 1;
+		#100 R = 0;
+		#100 R = 1;
+		     S = 1;
+		#100 R = 0;
+		     S = 0;
+		
+		
+
+		
+
+	end
+      
+endmodule
